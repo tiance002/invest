@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites name="vitest tests" tests="12" failures="0" errors="0" time="0.8260946">
+    <testsuite name="src/App.test.tsx" timestamp="2026-10-28T05:28:11.536Z" hostname="天策" tests="5" failures="0" errors="0" skipped="0" time="0.8055351">
+        <testcase classname="src/App.test.tsx" name="research workbench &gt; starts empty and rejects invalid forms without a POST" time="0.2527251">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="research workbench &gt; recovers saved task and does not poll succeeded task" time="0.1517657">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="research workbench &gt; polls running tasks until terminal status, then stops" time="0.0473116">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="research workbench &gt; explains uncertain submission and reuses its key on user retry" time="0.2005471">
+        </testcase>
+        <testcase classname="src/App.test.tsx" name="research workbench &gt; shows failure and retries with the same task id and an idempotency header" time="0.1511781">
+        </testcase>
+    </testsuite>
+    <testsuite name="src/api.test.ts" timestamp="2026-10-28T05:28:11.543Z" hostname="天策" tests="7" failures="0" errors="0" skipped="0" time="0.0205595">
+        <testcase classname="src/api.test.ts" name="request validation &gt; validates market-specific symbols and trading horizon" time="0.004324">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="idempotency and uncertain failures &gt; keeps the same key across resubmission and rotates for changed or explicit new requests" time="0.0023713">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="idempotency and uncertain failures &gt; retains key after network uncertainty and sends required header" time="0.0079893">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="idempotency and uncertain failures &gt; scopes retry keys to task and attempt and preserves uncertain retries" time="0.000807">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="idempotency and uncertain failures &gt; retains submission key in memory when browser storage is unavailable" time="0.0017314">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="preserves application error detail" time="0.0010258">
+        </testcase>
+        <testcase classname="src/api.test.ts" name="stops polling for both terminal statuses" time="0.0002258">
+        </testcase>
+    </testsuite>
+</testsuites>

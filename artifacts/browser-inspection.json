@@ -1,0 +1,26 @@
+{
+  "started_at": "2026-10-28T05:26:29.409728+00:00",
+  "checks": [],
+  "tasks": {},
+  "browser_version": "156.0.4314.42",
+  "initial_controls": {
+    "buttons": [
+      " 新任务",
+      "开始模拟研究",
+      ""
+    ],
+    "field_ids": [
+      "market",
+      "symbol",
+      "horizon",
+      "question",
+      "scenario",
+      "task-select"
+    ]
+  },
+  "page_errors": [],
+  "console_errors": [
+    "Failed to load resource: the server responded with a status of 404 (Not Found)"
+  ],
+  "finished_at": "2026-10-28T05:26:33.310480+00:00"
+}

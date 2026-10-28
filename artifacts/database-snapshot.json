@@ -1,0 +1,1 @@
+{"server_version" : "16.15 (Debian 16.15-1.pgdg12+2)", "migration" : "0001_phase_one", "tasks" : 7, "runs" : 9, "agent_runs" : 18, "results" : 5, "idempotency_records" : 9, "duplicate_result_tasks" : 0, "duplicate_attempts" : 0, "extensions" : ["plpgsql"], "remaining_test_schemas" : 0}

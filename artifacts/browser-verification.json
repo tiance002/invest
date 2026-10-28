@@ -1,0 +1,820 @@
+{
+  "started_at": "2026-10-28T05:26:59.662115+00:00",
+  "checks": [
+    {
+      "name": "browser submission completes real worker workflow",
+      "passed": true
+    },
+    {
+      "name": "mock labels visible",
+      "passed": true
+    },
+    {
+      "name": "agent input output and evidence inspectable",
+      "passed": true
+    },
+    {
+      "name": "task selection survives page reload",
+      "passed": true
+    },
+    {
+      "name": "browser duplicate submit reuses durable task",
+      "passed": true
+    },
+    {
+      "name": "mobile viewport has no horizontal overflow",
+      "passed": true
+    },
+    {
+      "name": "browser retry retains task identity",
+      "passed": true
+    },
+    {
+      "name": "failed and successful attempts both remain visible",
+      "passed": true
+    },
+    {
+      "name": "timeout visible with persisted error",
+      "passed": true
+    },
+    {
+      "name": "no uncaught browser errors",
+      "passed": true
+    },
+    {
+      "name": "no browser console errors",
+      "passed": true
+    }
+  ],
+  "tasks": {
+    "normal": {
+      "id": "195412ed-56d0-42bc-922c-70d4846db73c",
+      "status": "succeeded",
+      "mode": "mock",
+      "request": {
+        "symbol": "600519",
+        "market": "CN_A",
+        "horizon_days": 3,
+        "research_question": "浏览器演示：哪些模拟证据支持论点，反方会如何质疑？",
+        "scenario": "normal"
+      },
+      "run_version": "mock-graph-v1",
+      "attempt_count": 1,
+      "created_at": "2026-10-28T05:27:01.349124Z",
+      "updated_at": "2026-10-28T05:27:01.538662Z",
+      "error": null,
+      "result": {
+        "mode": "mock",
+        "summary": "[模拟研究结果] 两个角色已完成固定证据讨论。本结果仅用于流程演示，不构成投资建议。",
+        "agreements": [
+          "[模拟] 证据链可追溯到本地固定版本。",
+          "[模拟] 缺少真实数据，无法作出现实判断。"
+        ],
+        "disagreements": [
+          "[模拟] 研究员保留需求假设；质询员认为样本偏差仍未排除。"
+        ],
+        "open_questions": [
+          "[模拟] 若进入未来研究阶段，应如何引入独立来源并验证反例？"
+        ],
+        "evidence_refs": [
+          "mock-evidence-v1:sample-a",
+          "mock-evidence-v1:sample-b"
+        ],
+        "agent_outputs": [
+          {
+            "mode": "mock",
+            "role": "researcher",
+            "basis": [
+              "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+            ],
+            "doubts": [
+              "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+            ],
+            "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+            "evidence_refs": [
+              "mock-evidence-v1:sample-a",
+              "mock-evidence-v1:sample-b"
+            ]
+          },
+          {
+            "mode": "mock",
+            "role": "challenger",
+            "basis": [
+              "[模拟] 已对照研究员输出与固定反例样本 B。"
+            ],
+            "doubts": [
+              "[模拟] 样本选择偏差尚未排除。",
+              "[模拟] 需求假设缺少独立验证。"
+            ],
+            "conclusion": "[模拟] 证据不足以支持现实判断；保留分歧并请求进一步核查。",
+            "evidence_refs": [
+              "mock-evidence-v1:sample-a",
+              "mock-evidence-v1:sample-b"
+            ]
+          }
+        ]
+      },
+      "runs": [
+        {
+          "id": "86455e43-bf74-44e8-99bb-aff76a4621ba",
+          "attempt": 1,
+          "run_version": "mock-graph-v1",
+          "status": "succeeded",
+          "started_at": "2026-10-28T05:27:01.363900Z",
+          "finished_at": "2026-10-28T05:27:01.538662Z",
+          "duration_ms": 174,
+          "error": null,
+          "agent_runs": [
+            {
+              "id": "26d1a5a2-2741-4815-9849-ab3a6f49e694",
+              "role": "researcher",
+              "status": "succeeded",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "normal",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：哪些模拟证据支持论点，反方会如何质疑？"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "researcher-mock-v1",
+                "previous_outputs": []
+              },
+              "output": {
+                "mode": "mock",
+                "role": "researcher",
+                "basis": [
+                  "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                ],
+                "doubts": [
+                  "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                ],
+                "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                "evidence_refs": [
+                  "mock-evidence-v1:sample-a",
+                  "mock-evidence-v1:sample-b"
+                ]
+              },
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 55,
+              "error": null,
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            },
+            {
+              "id": "eef9c4f5-7ff1-4f34-a532-d579ba62145c",
+              "role": "challenger",
+              "status": "succeeded",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "normal",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：哪些模拟证据支持论点，反方会如何质疑？"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "challenger-mock-v1",
+                "previous_outputs": [
+                  {
+                    "mode": "mock",
+                    "role": "researcher",
+                    "basis": [
+                      "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                    ],
+                    "doubts": [
+                      "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                    ],
+                    "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                    "evidence_refs": [
+                      "mock-evidence-v1:sample-a",
+                      "mock-evidence-v1:sample-b"
+                    ]
+                  }
+                ]
+              },
+              "output": {
+                "mode": "mock",
+                "role": "challenger",
+                "basis": [
+                  "[模拟] 已对照研究员输出与固定反例样本 B。"
+                ],
+                "doubts": [
+                  "[模拟] 样本选择偏差尚未排除。",
+                  "[模拟] 需求假设缺少独立验证。"
+                ],
+                "conclusion": "[模拟] 证据不足以支持现实判断；保留分歧并请求进一步核查。",
+                "evidence_refs": [
+                  "mock-evidence-v1:sample-a",
+                  "mock-evidence-v1:sample-b"
+                ]
+              },
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 57,
+              "error": null,
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            }
+          ]
+        }
+      ]
+    },
+    "retry": {
+      "id": "bc785adf-478f-455a-879d-94ee51b1375c",
+      "status": "succeeded",
+      "mode": "mock",
+      "request": {
+        "symbol": "600519",
+        "market": "CN_A",
+        "horizon_days": 3,
+        "research_question": "浏览器演示：首次模拟失败后，在同一任务中重试并保留历史。",
+        "scenario": "fail_once"
+      },
+      "run_version": "mock-graph-v1",
+      "attempt_count": 2,
+      "created_at": "2026-10-28T05:27:04.174125Z",
+      "updated_at": "2026-10-28T05:27:05.833883Z",
+      "error": null,
+      "result": {
+        "mode": "mock",
+        "summary": "[模拟研究结果] 两个角色已完成固定证据讨论。本结果仅用于流程演示，不构成投资建议。",
+        "agreements": [
+          "[模拟] 证据链可追溯到本地固定版本。",
+          "[模拟] 缺少真实数据，无法作出现实判断。"
+        ],
+        "disagreements": [
+          "[模拟] 研究员保留需求假设；质询员认为样本偏差仍未排除。"
+        ],
+        "open_questions": [
+          "[模拟] 若进入未来研究阶段，应如何引入独立来源并验证反例？"
+        ],
+        "evidence_refs": [
+          "mock-evidence-v1:sample-a",
+          "mock-evidence-v1:sample-b"
+        ],
+        "agent_outputs": [
+          {
+            "mode": "mock",
+            "role": "researcher",
+            "basis": [
+              "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+            ],
+            "doubts": [
+              "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+            ],
+            "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+            "evidence_refs": [
+              "mock-evidence-v1:sample-a",
+              "mock-evidence-v1:sample-b"
+            ]
+          },
+          {
+            "mode": "mock",
+            "role": "challenger",
+            "basis": [
+              "[模拟] 已对照研究员输出与固定反例样本 B。"
+            ],
+            "doubts": [
+              "[模拟] 样本选择偏差尚未排除。",
+              "[模拟] 需求假设缺少独立验证。"
+            ],
+            "conclusion": "[模拟] 证据不足以支持现实判断；保留分歧并请求进一步核查。",
+            "evidence_refs": [
+              "mock-evidence-v1:sample-a",
+              "mock-evidence-v1:sample-b"
+            ]
+          }
+        ]
+      },
+      "runs": [
+        {
+          "id": "34edcbec-7076-4684-85e7-f841db7b32e4",
+          "attempt": 1,
+          "run_version": "mock-graph-v1",
+          "status": "failed",
+          "started_at": "2026-10-28T05:27:04.184353Z",
+          "finished_at": "2026-10-28T05:27:04.315523Z",
+          "duration_ms": 131,
+          "error": {
+            "code": "SIMULATED_FAILURE",
+            "message": "已触发预设的首次模拟故障；可手动重试。"
+          },
+          "agent_runs": [
+            {
+              "id": "9e07e829-baf3-477f-b7f2-63770303fa51",
+              "role": "researcher",
+              "status": "succeeded",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "fail_once",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：首次模拟失败后，在同一任务中重试并保留历史。"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "researcher-mock-v1",
+                "previous_outputs": []
+              },
+              "output": {
+                "mode": "mock",
+                "role": "researcher",
+                "basis": [
+                  "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                ],
+                "doubts": [
+                  "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                ],
+                "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                "evidence_refs": [
+                  "mock-evidence-v1:sample-a",
+                  "mock-evidence-v1:sample-b"
+                ]
+              },
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 42,
+              "error": null,
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            },
+            {
+              "id": "3d6aa5a0-42ba-413a-91e7-e204c863c8b1",
+              "role": "challenger",
+              "status": "failed",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "fail_once",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：首次模拟失败后，在同一任务中重试并保留历史。"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "challenger-mock-v1",
+                "previous_outputs": [
+                  {
+                    "mode": "mock",
+                    "role": "researcher",
+                    "basis": [
+                      "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                    ],
+                    "doubts": [
+                      "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                    ],
+                    "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                    "evidence_refs": [
+                      "mock-evidence-v1:sample-a",
+                      "mock-evidence-v1:sample-b"
+                    ]
+                  }
+                ]
+              },
+              "output": null,
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 50,
+              "error": {
+                "code": "SIMULATED_FAILURE",
+                "message": "已触发预设的首次模拟故障；可手动重试。"
+              },
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            }
+          ]
+        },
+        {
+          "id": "8292cb87-a974-49d6-b1e9-4487f715c128",
+          "attempt": 2,
+          "run_version": "mock-graph-v1",
+          "status": "succeeded",
+          "started_at": "2026-10-28T05:27:05.673424Z",
+          "finished_at": "2026-10-28T05:27:05.833883Z",
+          "duration_ms": 160,
+          "error": null,
+          "agent_runs": [
+            {
+              "id": "2c4f65f9-3c61-4362-a6f5-ee6bf93977e9",
+              "role": "researcher",
+              "status": "succeeded",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "fail_once",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：首次模拟失败后，在同一任务中重试并保留历史。"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "researcher-mock-v1",
+                "previous_outputs": []
+              },
+              "output": {
+                "mode": "mock",
+                "role": "researcher",
+                "basis": [
+                  "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                ],
+                "doubts": [
+                  "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                ],
+                "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                "evidence_refs": [
+                  "mock-evidence-v1:sample-a",
+                  "mock-evidence-v1:sample-b"
+                ]
+              },
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 51,
+              "error": null,
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            },
+            {
+              "id": "0394ada5-f1ed-4e29-8ff1-bb8762232249",
+              "role": "challenger",
+              "status": "succeeded",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "fail_once",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：首次模拟失败后，在同一任务中重试并保留历史。"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "challenger-mock-v1",
+                "previous_outputs": [
+                  {
+                    "mode": "mock",
+                    "role": "researcher",
+                    "basis": [
+                      "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                    ],
+                    "doubts": [
+                      "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                    ],
+                    "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                    "evidence_refs": [
+                      "mock-evidence-v1:sample-a",
+                      "mock-evidence-v1:sample-b"
+                    ]
+                  }
+                ]
+              },
+              "output": {
+                "mode": "mock",
+                "role": "challenger",
+                "basis": [
+                  "[模拟] 已对照研究员输出与固定反例样本 B。"
+                ],
+                "doubts": [
+                  "[模拟] 样本选择偏差尚未排除。",
+                  "[模拟] 需求假设缺少独立验证。"
+                ],
+                "conclusion": "[模拟] 证据不足以支持现实判断；保留分歧并请求进一步核查。",
+                "evidence_refs": [
+                  "mock-evidence-v1:sample-a",
+                  "mock-evidence-v1:sample-b"
+                ]
+              },
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 60,
+              "error": null,
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            }
+          ]
+        }
+      ]
+    },
+    "timeout": {
+      "id": "2ff3fd19-8622-4ae8-92c4-6a4d69f859ea",
+      "status": "failed",
+      "mode": "mock",
+      "request": {
+        "symbol": "600519",
+        "market": "CN_A",
+        "horizon_days": 3,
+        "research_question": "浏览器演示：模拟模型超时，核对结构化错误与部分输出。",
+        "scenario": "timeout"
+      },
+      "run_version": "mock-graph-v1",
+      "attempt_count": 1,
+      "created_at": "2026-10-28T05:27:07.277887Z",
+      "updated_at": "2026-10-28T05:27:08.418786Z",
+      "error": {
+        "code": "MODEL_TIMEOUT",
+        "message": "模拟模型响应超时；可在尝试次数允许时重试。"
+      },
+      "result": null,
+      "runs": [
+        {
+          "id": "fb597e15-36fa-4d2b-87b8-11bf4ac8e3b9",
+          "attempt": 1,
+          "run_version": "mock-graph-v1",
+          "status": "failed",
+          "started_at": "2026-10-28T05:27:07.288823Z",
+          "finished_at": "2026-10-28T05:27:08.418786Z",
+          "duration_ms": 1129,
+          "error": {
+            "code": "MODEL_TIMEOUT",
+            "message": "模拟模型响应超时；可在尝试次数允许时重试。"
+          },
+          "agent_runs": [
+            {
+              "id": "89b934ad-5e79-4474-a841-96b7a5a592a5",
+              "role": "researcher",
+              "status": "succeeded",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "timeout",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：模拟模型超时，核对结构化错误与部分输出。"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "researcher-mock-v1",
+                "previous_outputs": []
+              },
+              "output": {
+                "mode": "mock",
+                "role": "researcher",
+                "basis": [
+                  "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                ],
+                "doubts": [
+                  "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                ],
+                "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                "evidence_refs": [
+                  "mock-evidence-v1:sample-a",
+                  "mock-evidence-v1:sample-b"
+                ]
+              },
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 56,
+              "error": null,
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            },
+            {
+              "id": "25dd7764-799c-42ff-b0eb-5bfcf2c79168",
+              "role": "challenger",
+              "status": "failed",
+              "input": {
+                "mode": "mock",
+                "request": {
+                  "market": "CN_A",
+                  "symbol": "600519",
+                  "scenario": "timeout",
+                  "horizon_days": 3,
+                  "research_question": "浏览器演示：模拟模型超时，核对结构化错误与部分输出。"
+                },
+                "evidence": {
+                  "mode": "mock",
+                  "items": [
+                    {
+                      "id": "mock-evidence-v1:sample-a",
+                      "mode": "mock",
+                      "source": "本地虚构样本 A",
+                      "statement": "模拟文档描述了一个待核实的需求增长假设；没有真实财务数字。"
+                    },
+                    {
+                      "id": "mock-evidence-v1:sample-b",
+                      "mode": "mock",
+                      "source": "本地虚构样本 B",
+                      "statement": "模拟反例指出样本覆盖不足且存在选择偏差；不能据此推断真实证券表现。"
+                    }
+                  ],
+                  "version": "mock-evidence-v1"
+                },
+                "prompt_version": "challenger-mock-v1",
+                "previous_outputs": [
+                  {
+                    "mode": "mock",
+                    "role": "researcher",
+                    "basis": [
+                      "[模拟] 样本 A 提供需求假设，样本 B 提供覆盖范围限制。"
+                    ],
+                    "doubts": [
+                      "[模拟] 缺少真实财务数据、时间序列与独立来源。"
+                    ],
+                    "conclusion": "[模拟] 已整理 600519 的虚构证据链；仅验证研究流程，不形成投资建议。",
+                    "evidence_refs": [
+                      "mock-evidence-v1:sample-a",
+                      "mock-evidence-v1:sample-b"
+                    ]
+                  }
+                ]
+              },
+              "output": null,
+              "evidence_refs": [
+                "mock-evidence-v1:sample-a",
+                "mock-evidence-v1:sample-b"
+              ],
+              "duration_ms": 1025,
+              "error": {
+                "code": "MODEL_TIMEOUT",
+                "message": "模拟模型响应超时；可在尝试次数允许时重试。"
+              },
+              "model_provider": "deterministic-mock",
+              "model_name": "arena-mock-v1",
+              "input_tokens": null,
+              "output_tokens": null,
+              "cost_usd": null
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "browser_version": "156.0.4314.42",
+  "initial_controls": {
+    "buttons": [
+      " 新任务",
+      "开始模拟研究",
+      ""
+    ],
+    "field_ids": [
+      "market",
+      "symbol",
+      "horizon",
+      "question",
+      "scenario",
+      "task-select"
+    ]
+  },
+  "passed": true,
+  "page_errors": [],
+  "console_errors": [],
+  "finished_at": "2026-10-28T05:27:09.838474+00:00"
+}

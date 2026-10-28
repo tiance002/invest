@@ -1,0 +1,15 @@
+# Progress
+- 2026-10-28 (Asia/Shanghai): repository audit completed; minimal implementation plan recorded.
+- Read Serena instructions and planning/front-end/testing skills.
+- User asked why Docker now; clarified dependency-only use and application packaging deferred.
+- User requested native database inventory; verified native PG16.4/service5432, Redis only found in Docker. Switched project development default to separate native PG cluster55433, preserving existing cluster.
+- User explicitly selected both infrastructure dependencies in Docker with readable project grouping. Runtime implementation updated accordingly; host-native apps unchanged.
+- Frontend: 12 tests passed, production build passed, npm audit 0 after Vitest5 update. Backend: 15 DB-independent tests passed including actual LangGraph, 16 PostgreSQL tests pending runtime. QA Playwright1.64.1 installed; headless Edge156 launched successfully.
+- Completed architecture/sequence diagrams, README startup/migration draft, mock and next-stage scope documentation. Independent backend review assigned.
+- Real Edge browser demo completed11checks: normal submit, raw traces, reload, duplicate, mobile no overflow, failure/retry, timeout, zero page/console errors. Fixed initial favicon404; loopback defaults applied.
+- Backend full36tests passed0skipped, actual PG16.15, Alembic0001_phase_one and drift check clean. Frontend12tests JUnit and production build passed after final icon/default-host changes.
+- Live runtime24checks passed: Redis stop still processes task, PGstop returns503, restart preserves full result/traces/idempotency. Runtime agent now verifies full stop/start and duplicate start.
+- One read-only DB snapshot coincided with intentional lifecycle stop (service postgres not running); defer snapshot until lifecycle done.
+- Final:36backend tests,12frontend tests,24live runtime checks,11browser checks all passed. Both named Docker services healthy; host API/Worker/frontend alive after complete stop/start. Final DB snapshot:7tasks9runs18agent traces5results; duplicate result/attempt counts0, leftover test schemas0, only plpgsql extension.
+- Redis now explicit tmpfs /data, image digests pinned. Removed own stopped legacy-named container after verifying project ownership; volumes preserved. Recreated Redis healthy; final readinessok.
+- Added-file manifest94files; README, audit, API contract, architecture+sequence diagrams, verification and next-stage limits complete. UI open requested in Codex (tool queued). Phase one complete; no further scope started.

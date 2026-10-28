@@ -1,0 +1,57 @@
+{
+  "verified_at": "2026-10-28T13:32:01.1376628+08:00",
+  "compose_project": "investment-thesis-arena",
+  "duplicate_start": {
+    "passed": true,
+    "existing_process_ids_unchanged": true
+  },
+  "stop_start": {
+    "passed": true,
+    "preserved_task_id": "195412ed-56d0-42bc-922c-70d4846db73c"
+  },
+  "final_health": {
+    "status": "ok",
+    "mode": "mock"
+  },
+  "final_readiness": {
+    "status": "ok",
+    "mode": "mock",
+    "postgres": "ok",
+    "redis": "ok",
+    "durable_polling": true
+  },
+  "final_frontend_status": 200,
+  "processes": [
+    {
+      "Name": "api",
+      "Pid": 16764,
+      "StartTimeUtc": "2026-10-28T05:29:05.6002622Z"
+    },
+    {
+      "Name": "worker",
+      "Pid": 31824,
+      "StartTimeUtc": "2026-10-28T05:29:05.6920391Z"
+    },
+    {
+      "Name": "frontend",
+      "Pid": 39884,
+      "StartTimeUtc": "2026-10-28T05:29:07.9860673Z"
+    }
+  ],
+  "containers": [
+    {
+      "Name": "investment-thesis-arena-postgres",
+      "Service": "postgres",
+      "State": "running",
+      "Health": "healthy"
+    },
+    {
+      "Name": "investment-thesis-arena-redis",
+      "Service": "redis",
+      "State": "running",
+      "Health": "healthy"
+    }
+  ],
+  "legacy_temporary_container_removed": true,
+  "redis_storage": "tmpfs /data; queue state disposable"
+}

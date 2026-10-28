@@ -1,0 +1,11 @@
+# Findings
+- Audit: workspace initially empty, including hidden entries. No existing components or user data to preserve.
+- Runtime tools: Python 3.13.0; Node 24.18.0; npm 11.16.0; Docker 29.8.0; Compose 5.5.1.
+- Docker engine initially unavailable. No psql/redis-server on PATH.
+- LangGraph official docs available through Context7; use minimal StateGraph and application-owned DB durability.
+- Expanded host audit at user request: native PostgreSQL16.4 found in E:\pgsql\bin; study-plan-postgresql service uses E:\pgsql\data on127.0.0.1:5432, accepting connections. No native Redis found in Windows services/processes/common install paths or Ubuntu packages/executables. Docker has stopped prior Redis/PG containers; 55432 historical binding belongs to another project.
+- Revised implementation: reuse native PG binaries with NEW project .runtime/postgres-data on55433; leave existing PG service/data unchanged. Redis remains isolated Docker56379. Host-native API/frontend/worker; app images deferred.
+- LangGraph official source: https://docs.langchain.com/oss/python/langgraph/graph-api; deterministic functions supported as nodes, compilation required, app DB handles durability in this phase.
+- QA environment pip encountered one PyPI read timeout; bounded retry progressed to Playwright wheel download.
+- FINAL runtime choice (explicit user steering): both PostgreSQL and Redis in Docker; group investment-thesis-arena; containers investment-thesis-arena-postgres and investment-thesis-arena-redis; ports55433/56379. Native5432 remains untouched. This supersedes the temporary native project-cluster decision above.
+- Official postgres:17-alpine pull stalled for >3min with no byte/completion events after an earlier interrupted partial pull. Chose already cached pgvector/pgvector:pg16 as a compatible PostgreSQL16 container image, no vector extension enabled. Same isolated group/names/ports/volume; runtime will record actual image digest/version. User informed. No PostgreSQL version had been mandated.
